@@ -421,7 +421,7 @@ export const MainComponent = React.memo(() => {
 								<Item onClick={didClickDownloadGroupOrganigramAsPNG}>Export als PNG Datei</Item>
 							</Submenu>
 						</Menu>
-						<MiniMap zoomable pannable />
+						<MiniMap zoomable pannable maskStrokeColor="black" bgColor="grey" />
 						<Background />
 						{!isLoading && (
 							<Panel position="top-left" className="h-3/4 w-1/4">

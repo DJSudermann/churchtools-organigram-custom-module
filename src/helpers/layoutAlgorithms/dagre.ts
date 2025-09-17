@@ -11,6 +11,8 @@ export const layoutDagre = (nodes: Node[], edges: Edge[]): { nodes: Node[]; edge
 	dagreGraph.setDefaultEdgeLabel(() => ({}));
 	dagreGraph.setGraph({
 		rankdir: 'LR',
+		nodseep: 30,
+		ranksep: 25
 	});
 
 	for (const node of nodes) {
