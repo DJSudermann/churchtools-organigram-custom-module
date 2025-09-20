@@ -1,5 +1,6 @@
+import '@xyflow/react/dist/style.css';
 import 'react-contexify/dist/ReactContexify.css';
-import 'reactflow/dist/style.css';
+import { Background, MiniMap, Panel, ReactFlow } from '@xyflow/react';
 import { Button, ButtonDropdown, Description, Loading, Select, Toggle } from '@geist-ui/core';
 import { ChevronDown, ChevronUp } from '@geist-ui/icons';
 import { Constants } from '../globals/Constants';
@@ -15,11 +16,10 @@ import { generateReflowData } from '../helpers/dataConverters/ReflowConverter';
 import { toPng } from 'html-to-image';
 import { useAppStore } from '../state/useAppStore';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import ReactFlow, { Background, MiniMap, Panel } from 'reactflow';
 import _ from 'lodash';
 import moment from 'moment';
 import type { ItemParams } from 'react-contexify';
-import type { Node } from 'reactflow';
+import type { Node } from '@xyflow/react';
 import type { MouseEvent as ReactMouseEvent } from 'react';
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
@@ -79,9 +79,9 @@ export const MainComponent = React.memo(() => {
 	// Callbacks
 	const didPressDownloadGraphML = useCallback(() => {
 		const groupName = groupIdToStartWith
-			? groupsById[Number(groupIdToStartWith)]
+			? (groupsById[Number(groupIdToStartWith)]
 				? groupsById[Number(groupIdToStartWith)].name
-				: undefined
+				: undefined)
 			: undefined;
 
 		const fileName = groupName
@@ -248,7 +248,7 @@ export const MainComponent = React.memo(() => {
 	const renderSelectGroupToStartWith = useCallback(() => {
 		return (
 			<div className="flex-col">
-				<h5>Gruppe, mit der gestartet werden soll</h5>
+				<h5>Test, mit der gestartet werden soll</h5>
 
 				<Select
 					placeholder={<p>Keine Gruppe ausgewählt</p>}
@@ -391,7 +391,7 @@ export const MainComponent = React.memo(() => {
 			<div className="flex w-full items-center justify-between gap-6 border-0 border-b border-solid px-6 py-3.5 text-lg">
 				<div className="flex grow gap-6 divide-x font-bold">
 					<div className="flex h-7 items-baseline gap-4">
-						<span>ChurchTools Organigramm</span>
+						<span>Test Organigramm 0.0.7 - Alpha</span>
 					</div>
 				</div>
 			</div>

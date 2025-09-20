@@ -1,4 +1,4 @@
-import { Handle, Position } from "reactflow";
+import { Handle, Position } from "@xyflow/react";
 import { useAppStore } from "../../state/useAppStore";
 import React, { useCallback, useMemo } from "react";
 import type { getColorForGroupType } from '../../globals/Colors';

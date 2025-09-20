@@ -39,6 +39,8 @@
 				"ignoreMemberSort": false,
 				"memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
 			}
-		]
+		],
+		"valid-jsdoc": "off",           //  ← TS macht die Typen, Regel raus
+  		"unicorn/no-null": "off"        //  ← falls ihr null bewusst verwendet
 	}
 }

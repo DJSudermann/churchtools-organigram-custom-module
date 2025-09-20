@@ -1,11 +1,10 @@
-import { MarkerType, Position } from 'reactflow';
+import { MarkerType, Position } from '@xyflow/react';
 import { createData } from '../createRelatedData';
 import { getColorForGroupType } from '../../globals/Colors';
 import { getGroupMetadataString, getGroupTitle } from './../GraphHelper';
 import { layoutDagre } from '../layoutAlgorithms/dagre';
 import { useAppStore } from '../../state/useAppStore';
-import type { Edge } from './../../../node_modules/@reactflow/core/dist/esm/types/edges.d';
-import type { Node } from 'reactflow';
+import type { Edge, Node } from '@xyflow/react';
 
 export const generateReflowData = () => {
 	const { relations, nodes } = createData();
