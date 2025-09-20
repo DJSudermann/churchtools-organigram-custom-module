@@ -2,7 +2,6 @@
 import { getGroupMetadataString, getGroupNodeWidth, getGroupTitle, getReflowGroupNodeHeight } from '../GraphHelper';
 import { useAppStore } from '../../state/useAppStore';
 import dagre from 'dagre';
-import type { Edge, Node } from 'reactflow';
 import type { Edge, Node } from '@xyflow/react';
 import type { GraphNode } from '../../models/GraphNode';
 
