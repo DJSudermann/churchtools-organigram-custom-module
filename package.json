@@ -1,10 +1,8 @@
 {
 	"name": "churchtools-organigram-custom-module",
-<<<<<<< Updated upstream
-	"version": "0.0.6.1-beta",
-=======
+
 	"version": "0.0.7-alpha",
->>>>>>> Stashed changes
+
 	"private": true,
 	"homepage": "/ccm/organigram",
 	"dependencies": {
@@ -39,11 +37,12 @@
 	"scripts": {
 		"start": "craco start",
 		"build": "craco build",
-    	"build:module": "rimraf build && npm run build && cross-var bestzip organigram-$npm_package_version.zip build && node -e \"console.log('\\nYou can now upload the organigram.zip to your churchtools instance.\\nHint: Please keep in mind to use organigram as the shorty.')\"",
+		"build:module": "rimraf build && npm run build && cross-var \"cd build && bestzip ../organigram-$npm_package_version.zip index.html asset-manifest.json static\" && node -e \"console.log('\\nYou can now upload the organigram.zip to your churchtools instance.\\nHint: Please keep in mind to use organigram as the shorty.')\"",
 		"test": "craco test",
 		"eslint": "eslint --ext .js,.jsx,.ts,.tsx src/",
 		"ci": "npm run eslint"
 	},
+
 	"eslintConfig": {
 		"extends": [
 			"react-app",
